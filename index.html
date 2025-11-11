@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Silindokuhle Dekeda - Data Analysis Associate</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #f5e6d3 0%, #fae8e0 100%);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background: linear-gradient(135deg, #d4af37 0%, #f4c2c2 100%);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .header-content h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+
+        .header-content .subtitle {
+            font-size: 1.5em;
+            margin-bottom: 20px;
+            opacity: 0.95;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .contact-info a {
+            color: white;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: transform 0.3s;
+        }
+
+        .contact-info a:hover {
+            transform: translateY(-3px);
+        }
+
+        nav {
+            background: #8b7355;
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #d4af37;
+        }
+
+        section {
+            padding: 60px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 40px;
+            color: #8b7355;
+            position: relative;
+            padding-bottom: 15px;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 3px;
+            background: linear-gradient(90deg, #d4af37, #f4c2c2);
+        }
+
+        .about-content {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .certification-badge {
+            background: linear-gradient(135deg, #d4af37 0%, #f4c2c2 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            margin: 30px auto;
+            max-width: 600px;
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+        }
+
+        .certification-badge h3 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .skill-card {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            border-left: 4px solid #d4af37;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(212, 175, 55, 0.2);
+        }
+
+        .skill-card h3 {
+            color: #8b7355;
+            margin-bottom: 10px;
+        }
+
+        .experience-timeline {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .timeline-item {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            border-left: 5px solid #d4af37;
+        }
+
+        .timeline-item h3 {
+            color: #8b7355;
+            font-size: 1.5em;
+            margin-bottom: 5px;
+        }
+
+        .timeline-item .company {
+            color: #d4af37;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        .timeline-item .date {
+            color: #888;
+            font-size: 0.9em;
+            margin-bottom: 15px;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 30px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .project-card {
+            background: white;
+            border-radius: 15px;
+            padding: 40px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+            border-top: 5px solid #d4af37;
+            min-height: 250px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .project-card h3 {
+            color: #8b7355;
+            font-size: 1.5em;
+            margin-bottom: 15px;
+        }
+
+        .project-placeholder {
+            color: #d4af37;
+            font-style: italic;
+            font-size: 1.1em;
+        }
+
+        .education-card {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            max-width: 900px;
+            margin: 0 auto 20px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            border-left: 5px solid #f4c2c2;
+        }
+
+        .education-card h3 {
+            color: #8b7355;
+            font-size: 1.4em;
+            margin-bottom: 5px;
+        }
+
+        footer {
+            background: #8b7355;
+            color: white;
+            text-align: center;
+            padding: 30px 0;
+            margin-top: 60px;
+        }
+
+        @media (max-width: 768px) {
+            .header-content h1 {
+                font-size: 2em;
+            }
+
+            .section-title {
+                font-size: 2em;
+            }
+
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+
+            nav ul {
+                gap: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <h1>Silindokuhle Dekeda</h1>
+                <p class="subtitle">Data Analysis Associate</p>
+                <div class="contact-info">
+                    <a href="mailto:Silindokuhledekeda@gmail.com">📧 Silindokuhledekeda@gmail.com</a>
+                    <a href="tel:0603381183">📱 060 338 1183</a>
+                    <a href="https://www.linkedin.com/in/silindokuhle-dekeda-56062235b" target="_blank">💼 LinkedIn</a>
+                    <span>📍 Bellville, Western Cape</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#education">Education</a></li>
+        </ul>
+    </nav>
+
+    <section id="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <p style="font-size: 1.1em; margin-bottom: 20px;">
+                    Motivated and detail-oriented undergraduate student pursuing a Bachelor of Commerce in Management and Information Systems. Passionate about applying academic knowledge in real-world business environments. Seeking opportunities to contribute to organizational success while gaining hands-on experience in business operations, data analysis, and project management.
+                </p>
+                <p style="font-size: 1.05em; line-height: 1.8; color: #555; font-style: italic;">
+                    "Over the past few months, I've been immersing myself in the world of data analytics while preparing for the CompTIA Data+ certification. It's been a challenging yet exciting journey from exploring data mining, visualization, to governance. I'm incredibly grateful to CAPACITI and MICT SETA for their support in helping me pursue this certification. This is just the beginning, and I'm looking forward to many more opportunities to grow and contribute in the data space!"
+                </p>
+            </div>
+
+            <div class="certification-badge">
+                <h3>🏆 CompTIA Data+ Certified</h3>
+                <p><strong>Certification Code:</strong> 1NNKM9LYVJREYSNJ</p>
+                <p><strong>Obtained:</strong> October 15, 2025</p>
+                <p><strong>Valid Until:</strong> October 15, 2028</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" style="background: rgba(255,255,255,0.5);">
+        <div class="container">
+            <h2 class="section-title">Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <h3>📊 Data Analysis</h3>
+                    <p>Data mining, visualization, and governance with hands-on experience in analytical tools</p>
+                </div>
+                <div class="skill-card">
+                    <h3>💻 SQL</h3>
+                    <p>Database querying and management</p>
+                </div>
+                <div class="skill-card">
+                    <h3>📈 Business Analysis</h3>
+                    <p>Process analysis and business research</p>
+                </div>
+                <div class="skill-card">
+                    <h3>📋 Project Management</h3>
+                    <p>Planning, coordination, and execution of business projects</p>
+                </div>
+                <div class="skill-card">
+                    <h3>🖥️ Microsoft Office Suite</h3>
+                    <p>Advanced proficiency in Excel, Word, PowerPoint</p>
+                </div>
+                <div class="skill-card">
+                    <h3>🤝 Team Collaboration</h3>
+                    <p>Effective coordination and communication in team environments</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience">
+        <div class="container">
+            <h2 class="section-title">Work Experience</h2>
+            <div class="experience-timeline">
+                <div class="timeline-item">
+                    <h3>Data Analysis Associate</h3>
+                    <p class="company">Capaciti</p>
+                    <p class="date">July 2025 - Present</p>
+                    <p>Currently enrolled in a transformative data analysis program aimed at preparing professionals for the digital economy. Engaged in hands-on learning focused on data-driven decision-making and analytical tools.</p>
+                </div>
+
+                <div class="timeline-item">
+                    <h3>Observational Intern</h3>
+                    <p class="company">The Foschini Group</p>
+                    <p class="date">June 2025 - July 2025</p>
+                    <p>Gained exposure to various business functions including Service Delivery, Risk Control, Project Management, and Process Analysis. Developed agility and adaptability while acquiring practical insights into corporate operations.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" style="background: rgba(255,255,255,0.5);">
+        <div class="container">
+            <h2 class="section-title">Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <h3>Project 1</h3>
+                    <p class="project-placeholder">Coming Soon...</p>
+                </div>
+
+                <div class="project-card">
+                    <h3>Project 2</h3>
+                    <p class="project-placeholder">Coming Soon...</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="education">
+        <div class="container">
+            <h2 class="section-title">Education</h2>
+            <div class="education-card">
+                <h3>BCom in Information Systems and Management</h3>
+                <p class="company">University of the Western Cape</p>
+                <p class="date">2020 - Present</p>
+            </div>
+
+            <div class="education-card">
+                <h3>National Senior Certificate</h3>
+                <p class="company">Xolilizwe Senior Secondary School</p>
+                <p class="date">January 2019 - December 2019</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Silindokuhle Dekeda. All rights reserved.</p>
+            <p style="margin-top: 10px;">Empowering data-driven decisions 📊</p>
+        </div>
+    </footer>
+</body>
+</html>
