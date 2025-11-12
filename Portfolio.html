@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SILINDOKUHLE DEKEDA - Data Analyst Portfolio</title>
+    <style>
+        /* Define Brown and Gold color scheme */
+        :root {
+            --primary-brown: #4E342E; /* Deep Brown for background/sections */
+            --accent-gold: #FFD700; /* Gold for highlights and important text */
+            --text-light: #F5F5F5; /* Off-white for general text */
+            --text-dark: #333333; /* Dark text for light backgrounds (like the form) */
+            --secondary-brown: #795548; /* Lighter brown for borders/details */
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--text-light);
+            color: var(--text-dark);
+        }
+
+        header {
+            background-color: var(--primary-brown);
+            color: var(--text-light);
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            color: var(--accent-gold);
+            margin-bottom: 5px;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1100px;
+            margin: 20px auto;
+            padding: 20px;
+        }
+
+        section {
+            padding: 30px 0;
+            border-bottom: 1px solid var(--secondary-brown);
+        }
+
+        section h2 {
+            color: var(--primary-brown);
+            border-bottom: 2px solid var(--accent-gold);
+            padding-bottom: 5px;
+            margin-bottom: 20px;
+        }
+
+        .contact-info p, .passion-list {
+            line-height: 1.6;
+            margin: 5px 0;
+        }
+
+        .skill-list, .project-list {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .skill-list li {
+            background-color: var(--primary-brown);
+            color: var(--text-light);
+            padding: 8px 15px;
+            border-radius: 5px;
+            font-size: 0.9em;
+        }
+
+        /* Experience and Education Styling */
+        .card {
+            background-color: #ffffff;
+            border: 1px solid var(--secondary-brown);
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .card h3 {
+            color: var(--accent-gold);
+            margin-top: 0;
+        }
+
+        /* Form Styling */
+        #contact-form {
+            background-color: var(--primary-brown);
+            color: var(--text-light);
+            padding: 30px;
+            border-radius: 10px;
+        }
+        #contact-form h2 {
+            color: var(--accent-gold);
+            border-color: var(--accent-gold);
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        .form-group input[type="text"], 
+        .form-group input[type="email"], 
+        .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            box-sizing: border-box; /* Ensures padding doesn't affect total width */
+            background-color: rgba(255, 255, 255, 0.9);
+            color: var(--text-dark);
+        }
+        .form-group textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+        .form-group button {
+            background-color: var(--accent-gold);
+            color: var(--primary-brown);
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+        .form-group button:hover {
+            background-color: #e0b400; /* Slightly darker gold on hover */
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: var(--primary-brown);
+            color: var(--text-light);
+            margin-top: 30px;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>SILINDOKUHLE DEKEDA</h1>
+        <p>Data Analyst Portfolio </p>
+        <p>BCom Management and Information Systems Student | Data Analysis Enthusiast </p>
+        
+        <div class="contact-info">
+            <p>Email: Silindokuhledekeda@gmail.com [1]</p>
+            <p>LinkedIn: Silindokuhle Dekeda <a href="#">[1]</a></p>
+            <p>City of Cape Town, Western Cape, South Africa [1]</p>
+        </div>
+    </header>
+
+    <div class="container">
+
+        <section id="about">
+            <h2>About Me</h2>
+            
+            <p>I am a motivated and detail-oriented emerging Data Analyst. I am passionate about leveraging data to solve business challenges and inform strategic decisions. I possess great eagerness to contribute to organizational success while gaining hands-on experience in data analysis.</p>
+
+            <h3>Professional Insight</h3>
+            <div class="card">
+                <p>"This candidate shines with her own light, she leads with purpose and is always thinking about her next step. She is a true born leader and i have seen her take on many challenges within the tech space and conquer them. I do believe that she is part of the Tech Talent to watch in current, 2026 and the future to come. She would be a good addition to any team."</p>
+                <p>— Professional Recommendation (Brittany Brièlle Saptoe, Managed Directly, Oct 21, 2025 ) </p>
+            </div>
+
+            <h3>Passions & Learning Initiatives</h3>
+            <ul class="passion-list">
+                <li>Learning and experimenting with AI tools and technologies for problem-solving.</li>
+            </ul>
+        </section>
+
+        <section id="skills">
+            <h2>Core Skills </h2>
+            <ul class="skill-list">
+                <li>SQL </li>
+                <li>Data Analysis </li>
+                <li>Python (Programming Language) </li>
+                <li>Agile Project Management </li>
+                <li>Business Analysis </li>
+                <li>Firebase </li>
+                <li>Project Management </li>
+                <li>Team Collaboration </li>
+                <li>Problem Solving </li>
+            </ul>
+        </section>
+
+        <section id="experience">
+            <h2>Experience</h2>
+            
+            <div class="card">
+                <h3>Data Analysis Associate</h3>
+                <p>CAPACITI · Contract (Jul 2025 - Present)</p>
+                <ul>
+                    <li>Currently enrolled in a transformative data analysis program aimed at preparing professionals for the digital economy.</li>
+                    <li>Focused on data-driven decision-making and analytical tools, including gaining proficiency in SQL and Data Analysis.</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h3>Observational Intern</h3>
+                <p>TFG (The Foschini Group) · Contract (Jun 2025 - Jul 2025)</p>
+                <ul>
+                    <li>Gained exposure to various business functions including Service Delivery, Risk Control, Project Management, Business and Process Analysis.</li>
+                    <li>Acquired practical insights into corporate operations, with specific skills gained in Agile Project Management and Business Analysis.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="education">
+            <h2>Education & Certifications</h2>
+            
+            <div class="card">
+                <h3>Bachelor of Commerce - BCom (Management Information Systems and Services)</h3>
+                <p>University of the Western Cape (Present)</p>
+            </div>
+            
+            <div class="card">
+                <h3>Certifications</h3>
+                <ul>
+                    <li>Databases and SQL for Data Science with Python (IBM · Issued Oct 2025)</li>
+                    <li>Generative AI: Enhance your Data Analytics Career (IBM)</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h3>National Senior Certificate</h3>
+                <p>Xolilizwe Senior Secondary School (2019)</p>
+            </div>
+        </section>
+
+        <section id="projects">
+            <h2>Key Projects & Achievements</h2>
+            <ul class="project-list">
+                <li class="card">
+                    <h3>Ask UWC: Mental Health Chatbot</h3>
+                    <p>Created a mental health chatbot named Ask UWC using Python and Firebase, aimed at providing students with accessible mental health support and resources [5]. The chatbot was deployed on Firebase, ensuring scalability and reliability for user interactions.</p>
+                </li>
+                <li class="card">
+                    <h3>KindMind: Mental Health Chatbot (MVP)</h3>
+                    <p>Developed a Minimum Viable Product (MVP) for a mental health chatbot named KindMind, designed to provide users with accessible mental health support and resources.</p>
+                </li>
+            </ul>
+        </section>
+
+        <!-- CONTACT FORM SECTION (Requested Element) -->
+        <section id="get-in-touch">
+            <div id="contact-form">
+                <h2>Get in Touch</h2>
+                <p>Email: Silindokuhledekeda@gmail.com | Phone: 0603381183 | Location: City of Cape Town, South Africa </p>
+
+                <form action="#" method="POST">
+                    <div class="form-group">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="message" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit">Send Message</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Silindokuhle Dekeda Portfolio</p>
+    </footer>
+
+</body>
+</html>
