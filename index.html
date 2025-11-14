@@ -256,6 +256,70 @@
             margin-bottom: 5px;
         }
 
+        .contact-form-section {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .contact-form {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        .form-group label {
+            display: block;
+            color: #8b7355;
+            font-weight: 600;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 15px;
+            border: 2px solid #f5e6d3;
+            border-radius: 8px;
+            font-size: 1em;
+            font-family: inherit;
+            transition: border-color 0.3s;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #d4af37;
+        }
+
+        .form-group textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+
+        .submit-btn {
+            background: linear-gradient(135deg, #d4af37 0%, #f4c2c2 100%);
+            color: white;
+            padding: 15px 40px;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1em;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s;
+            width: 100%;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(212, 175, 55, 0.3);
+        }
+
         footer {
             background: #8b7355;
             color: white;
@@ -417,6 +481,38 @@
         </div>
     </section>
 
+
+   <!-- CONTACT FORM (NEW ADDITION) -->
+    <section id="contact-form">
+        <h2>Send Me a Message</h2>
+        <p>I look forward to discussing how my data analysis skills can benefit your organization.</p>
+        
+        <!-- 
+            NOTE: This is a standard HTML contact form structure. 
+            For the form to actually send an email, you will need server-side code (like PHP, Python, or a service like Formspree or Netlify Forms). 
+        -->
+        <section id="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-form-section">
+                <form class="contact-form" action="https://formspree.io/f/mpwkqjgg" method="POST">
+                    <div class="form-group">
+                        <label for="email">Your Email:</label>
+                        <input type="email" id="email" name="email" required placeholder="Enter your email address">
+                    </div>
+                    <div class="form-group">
+                        <label for="name">Your Name:</label>
+                        <input type="text" id="name" name="name" required placeholder="Enter your name">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Your Message:</label>
+                        <textarea id="message" name="message" required placeholder="Tell me about your inquiry..."></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Send Message ✉️</button>
+                </form>
+            </div>
+        </div>
+    </section>
    <footer>
         <div class="container">
             <p>&copy; 2025 Silindokuhle Dekeda. All rights reserved.</p>
